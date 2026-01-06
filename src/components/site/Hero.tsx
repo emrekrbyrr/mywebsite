@@ -121,35 +121,42 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5"
           >
-            <div className="relative mx-auto max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3 shadow-[0_0_0_1px_rgba(255,255,255,0.04)]">
-              <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-60" />
-              <div className="relative overflow-hidden rounded-2xl">
-                {showImage ? (
-                  <Image
-                    src={site.avatar.src}
-                    alt={site.avatar.alt}
-                    width={720}
-                    height={900}
-                    priority
-                    className="h-[380px] w-full object-cover"
-                    onError={() => setShowImage(false)}
-                  />
-                ) : (
-                  <div className="flex h-[380px] w-full items-center justify-center bg-black/40">
-                    <div className="text-center">
-                      <div className="mx-auto inline-flex size-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-lg font-bold tracking-[0.18em] text-zinc-50">
-                        YEK
+            <div className="relative mx-auto w-full max-w-[360px]">
+              <div className="absolute -inset-10 rounded-full bg-gradient-to-r from-cyan-500/25 via-violet-500/25 to-fuchsia-500/25 blur-3xl" />
+
+              <div className="relative overflow-hidden rounded-full border border-white/10 bg-white/5 p-2 shadow-[0_0_0_1px_rgba(255,255,255,0.06)]">
+                <div className="relative aspect-square overflow-hidden rounded-full">
+                  {showImage ? (
+                    <Image
+                      src={site.avatar.src}
+                      alt={site.avatar.alt}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 320px, 360px"
+                      className="object-cover"
+                      onError={() => setShowImage(false)}
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-black/40">
+                      <div className="text-center">
+                        <div className="mx-auto inline-flex size-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-lg font-bold tracking-[0.18em] text-zinc-50">
+                          YEK
+                        </div>
+                        <p className="mt-4 text-sm text-zinc-300">
+                          Fotoğraf için{" "}
+                          <span className="font-mono">public/profile.jpg</span>
+                        </p>
                       </div>
-                      <p className="mt-4 text-sm text-zinc-300">
-                        Fotoğraf için <span className="font-mono">public/profile.jpg</span>
-                      </p>
                     </div>
-                  </div>
-                )}
-              </div>
-              <div className="relative mt-3 flex items-center justify-between gap-3">
-                <p className="text-xs font-medium text-zinc-200">{site.name}</p>
-                <div className="h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 opacity-80" />
+                  )}
+                </div>
+
+                <div className="mt-3 flex items-center justify-between gap-3 px-2 pb-1">
+                  <p className="text-xs font-medium text-zinc-200">
+                    {site.name}
+                  </p>
+                  <div className="h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 opacity-80" />
+                </div>
               </div>
             </div>
           </motion.div>
