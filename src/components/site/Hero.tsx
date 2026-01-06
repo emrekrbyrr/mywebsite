@@ -137,7 +137,7 @@ export function Hero() {
                       onError={() => setShowImage(false)}
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-black/40">
+                    <div className="flex h-full w-full items-center justify-center bg-white/5">
                       <div className="text-center">
                         <div className="mx-auto inline-flex size-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-lg font-bold tracking-[0.18em] text-zinc-50">
                           YEK
