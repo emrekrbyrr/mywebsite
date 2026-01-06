@@ -16,9 +16,10 @@ function Glow({ className }: { className?: string }) {
         className,
       )}
     >
-      <div className="absolute -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-400/20 via-violet-400/20 to-fuchsia-400/20 blur-3xl" />
-      <div className="absolute -bottom-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-fuchsia-400/16 via-violet-400/16 to-cyan-400/16 blur-3xl" />
+      <div className="absolute -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#222222]/12 via-[#7b7b7b]/10 to-[#222222]/12 blur-3xl" />
+      <div className="absolute -bottom-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#7b7b7b]/10 via-[#222222]/10 to-[#7b7b7b]/10 blur-3xl" />
       <div className="absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,rgba(34,34,34,0.10)_1px,transparent_0)] [background-size:28px_28px] opacity-25" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-transparent" />
     </div>
   );
 }
@@ -124,7 +125,7 @@ export function Hero() {
             className="lg:col-span-5"
           >
             <div className="relative mx-auto w-full max-w-[360px]">
-              <div className="absolute -inset-10 rounded-full bg-gradient-to-r from-cyan-500/25 via-violet-500/25 to-fuchsia-500/25 blur-3xl" />
+              <div className="absolute -inset-10 rounded-full bg-gradient-to-r from-[#222222]/12 via-[#7b7b7b]/10 to-[#222222]/12 blur-3xl" />
 
               <div className="relative overflow-hidden rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] p-2 shadow-sm">
                 <div className="relative aspect-square overflow-hidden rounded-full">
