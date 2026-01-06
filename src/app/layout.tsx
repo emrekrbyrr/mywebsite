@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body
-        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-[color:var(--background)] text-zinc-50 antialiased`}
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-[color:var(--background)] text-zinc-950 antialiased`}
       >
         {children}
       </body>

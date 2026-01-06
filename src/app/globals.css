@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  /* Slightly lighter "midnight" base for readability */
-  --background: #0b1020;
-  --foreground: #f4f4f5;
+  /* Light, soft background (avoid pure white) */
+  --background: #f6f7fb;
+  --foreground: #0b1020;
 }
 
 @theme inline {
@@ -15,8 +15,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1020;
-    --foreground: #f4f4f5;
+    /* Keep same palette for consistency */
+    --background: #f6f7fb;
+    --foreground: #0b1020;
   }
 }
 
