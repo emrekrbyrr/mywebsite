@@ -119,27 +119,43 @@ export default function Home() {
               />
             </Reveal>
 
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              {Array.from({ length: 3 }).map((_, idx) => (
-                <Reveal key={idx} delay={idx * 0.06}>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <p className="text-sm font-semibold text-zinc-50">
-                      Proje {idx + 1}
-                    </p>
-                    <p className="mt-2 text-sm text-zinc-300">
-                      Yakında — kısa açıklama, teknoloji yığını ve linkler.
-                    </p>
-                    <div className="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 opacity-80" />
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              {site.projects.items.map((project, idx) => (
+                <Reveal key={project.title} delay={idx * 0.04}>
+                  <div className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition group-hover:opacity-100" />
+
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <p className="text-sm font-semibold text-zinc-50">
+                          {project.title}
+                        </p>
+                        <p className="mt-2 text-sm leading-7 text-zinc-300">
+                          {project.description}
+                        </p>
+                      </div>
+
+                      <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium tracking-wide text-zinc-200">
+                        {project.kind === "EMC" ? "EMC" : "Software"}
+                      </span>
+                    </div>
+
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[11px] font-medium text-zinc-200"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 opacity-80" />
                   </div>
                 </Reveal>
               ))}
             </div>
-
-            <Reveal delay={0.1}>
-              <p className="mt-8 max-w-3xl text-sm leading-7 text-zinc-300">
-                {site.projects.note}
-              </p>
-            </Reveal>
           </Container>
         </section>
 
