@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* Light, soft background (avoid pure white) */
-  --background: #f6f7fb;
-  --foreground: #0b1020;
+  /* Brand palette */
+  --primary: #222222;
+  --secondary: #7b7b7b;
+  --tertiary: #f8f8f8;
+  --white: #ffffff;
+
+  /* App tokens */
+  --background: var(--tertiary);
+  --foreground: var(--primary);
+  --muted: var(--secondary);
+  --surface: var(--white);
+  --border: rgba(34, 34, 34, 0.12);
 }
 
 @theme inline {
@@ -16,8 +25,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Keep same palette for consistency */
-    --background: #f6f7fb;
-    --foreground: #0b1020;
+    --background: var(--tertiary);
+    --foreground: var(--primary);
   }
 }
 
@@ -34,5 +43,5 @@ body {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.35);
+  background: rgba(34, 34, 34, 0.12);
 }
