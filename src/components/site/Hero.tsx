@@ -85,7 +85,7 @@ export function Hero() {
             >
               <a
                 href="#iletisim"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 px-5 text-sm font-semibold text-black transition hover:brightness-110"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--accent-cream)] via-[color:var(--accent-sand)] to-[color:var(--accent-coffee)] px-5 text-sm font-semibold text-[color:var(--primary)] shadow-sm transition hover:brightness-105"
               >
                 İletişime geç <Send className="size-4" />
               </a>
@@ -127,7 +127,7 @@ export function Hero() {
             <div className="relative mx-auto w-full max-w-[360px]">
               <div className="absolute -inset-10 rounded-full bg-gradient-to-r from-[#222222]/18 via-[#7b7b7b]/14 to-[#222222]/18 blur-3xl" />
 
-              <div className="relative overflow-hidden rounded-full border border-[color:var(--border)] bg-white/70 p-2 shadow-sm backdrop-blur-xl">
+              <div className="relative overflow-hidden rounded-full border border-[color:var(--border)] bg-[#fff6e8]/70 p-2 shadow-sm backdrop-blur-xl">
                 <div className="relative aspect-square overflow-hidden rounded-full">
                   {showImage ? (
                     <Image
@@ -155,7 +155,7 @@ export function Hero() {
                 </div>
 
                 <div className="mt-3 flex items-center justify-center px-2 pb-1">
-                  <div className="h-1 w-20 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 opacity-70" />
+                  <div className="h-1 w-20 rounded-full bg-gradient-to-r from-[color:var(--accent-cream)] via-[color:var(--accent-sand)] to-[color:var(--accent-coffee)] opacity-80" />
                 </div>
               </div>
             </div>

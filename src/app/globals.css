@@ -13,6 +13,11 @@
   --muted: var(--secondary);
   --surface: var(--white);
   --border: rgba(34, 34, 34, 0.12);
+
+  /* Warm accent (cream → coffee) */
+  --accent-cream: #e7d6b5;
+  --accent-sand: #d8c7a3;
+  --accent-coffee: #8b6a3e;
 }
 
 @theme inline {
