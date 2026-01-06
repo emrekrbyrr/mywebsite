@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-zinc-50">
+    <div className="min-h-screen bg-[color:var(--background)] text-zinc-50">
       <a
         href="#icerik"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-black"
@@ -26,7 +26,7 @@ export default function Home() {
       <main id="icerik">
         <section
           id="hakkimda"
-          className="relative border-y border-white/10 bg-gradient-to-b from-black via-black to-[#070714] py-20 sm:py-28"
+          className="relative border-y border-white/10 bg-gradient-to-b from-[color:var(--background)] via-[#0b1124] to-[#0f1630] py-20 sm:py-28"
         >
           <Container>
             <Reveal>
@@ -108,7 +108,7 @@ export default function Home() {
 
         <section
           id="projeler"
-          className="border-y border-white/10 bg-gradient-to-b from-black via-[#070714] to-black py-20 sm:py-28"
+          className="border-y border-white/10 bg-gradient-to-b from-[color:var(--background)] via-[#0f1630] to-[color:var(--background)] py-20 sm:py-28"
         >
           <Container>
             <Reveal>
@@ -144,7 +144,7 @@ export default function Home() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[11px] font-medium text-zinc-200"
+                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-zinc-200"
                         >
                           {tag}
                         </span>
