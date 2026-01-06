@@ -16,7 +16,7 @@ export const site = {
   hero: {
     headline: "Donanım disiplinini modern yazılımla birleştiriyorum.",
     subheadline:
-      "EMC ve elektromanyetik teori temeli üzerine; React.js, Node.js ve PostgreSQL ile ölçeklenebilir ürünler geliştiriyorum. AWS, Docker ve Linux ile üretim ortamlarını yönetiyorum.",
+      "Mühendislik kökenli bakış açımla, karmaşık iş akışlarını analiz ederek bunları yüksek performanslı dijital çözümlere dönüştürüyorum. Donanım ve yazılım dünyasının farklı dinamiklerine olan hakimiyetim, her projeye daha geniş bir pencereden ve sonuç odaklı bir vizyonla bakmamı sağlıyor.",
   },
   about: {
     title: "Hakkımda",
@@ -56,8 +56,43 @@ export const site = {
   },
   projects: {
     title: "Projeler",
-    note:
-      "Buraya seçili projelerimi (ekran görüntüsü, kısa açıklama, teknoloji yığını ve linkler) ekleyeceğim. İstersen projelerini gönder, birlikte en iyi vitrin sıralamasını yapalım.",
+    items: [
+      {
+        title: "Varlık ve Kiralama Yönetim Sistemi",
+        description:
+          "Şirketlerin ürün kiralama süreçlerini teklif aşamasından başlayarak sözleşme, ödeme ve cari takibiyle birlikte tek merkezden yönetmesini sağlar. Operasyonel yükü azaltırken, finansal akışın hatasız ve şeffaf şekilde izlenmesine olanak tanır.",
+        tags: ["React.js", "Node.js", "Bootstrap"],
+        kind: "Software",
+      },
+      {
+        title: "İtfaiye Bilgi Sistemi (Arayüz & Backend)",
+        description:
+          "İtfaiye operasyonlarını destekleyen bilgi sisteminde arayüz ve backend geliştirme çalışmaları.",
+        tags: ["React.js", "Node.js"],
+        kind: "Software",
+      },
+      {
+        title: "Şirket Web Siteleri Kurulumu & SEO Çalışmaları",
+        description:
+          "Kurumsal web sitesi kurulumları ve SEO iyileştirme çalışmaları ile görünürlük ve performans odaklı teslimatlar.",
+        tags: ["SEO", "Kurulum", "Performans"],
+        kind: "Software",
+      },
+      {
+        title: "EMC Uyumlu Elektrikli Araç Sensör Dizilimi",
+        description:
+          "Elektrikli araçlarda sensör diziliminin elektromanyetik uyumluluk (EMC) prensipleriyle tasarlanması ve paketleme yaklaşımı.",
+        tags: ["EMC", "Elektromanyetik Uyumluluk"],
+        kind: "EMC",
+      },
+      {
+        title: "Mikrodalga Fırın Bal Peteği Cam Tasarımı (EMC)",
+        description:
+          "Mikrodalga fırın bal peteği cam yapısında uzay girişiminin/kaçaklarının azaltılmasına yönelik EMC odaklı tasarım yaklaşımı.",
+        tags: ["EMC", "Faraday Kafesi", "Tasarım"],
+        kind: "EMC",
+      },
+    ],
   },
 } as const;
 
