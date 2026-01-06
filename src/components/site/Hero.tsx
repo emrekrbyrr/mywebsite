@@ -2,6 +2,8 @@
 
 import { ArrowDown, Github, Linkedin, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/cn";
 
@@ -22,79 +24,136 @@ function Glow({ className }: { className?: string }) {
 }
 
 export function Hero() {
+  const [showImage, setShowImage] = useState(true);
+
   return (
     <section className="relative overflow-hidden">
       <Glow />
 
       <div className="mx-auto max-w-6xl px-5 pb-20 pt-14 sm:px-8 sm:pb-28 sm:pt-20">
-        <motion.p
-          initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-zinc-200"
-        >
-          <span className="size-1.5 rounded-full bg-cyan-400/90" />
-          {site.role}
-        </motion.p>
+        <div className="grid items-center gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <motion.p
+              initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-zinc-200"
+            >
+              <span className="size-1.5 rounded-full bg-cyan-400/90" />
+              {site.role}
+            </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.9, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 text-balance text-4xl font-semibold tracking-tight text-zinc-50 sm:text-6xl"
-        >
-          {site.name}
-        </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 16, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{
+                duration: 0.9,
+                delay: 0.08,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mt-6 text-balance text-4xl font-semibold tracking-tight text-zinc-50 sm:text-6xl"
+            >
+              {site.name}
+            </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 14, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 max-w-2xl text-pretty text-lg leading-8 text-zinc-300"
-        >
-          <span className="text-zinc-50">{site.hero.headline}</span>{" "}
-          {site.hero.subheadline}
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 14, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{
+                duration: 0.9,
+                delay: 0.16,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mt-5 max-w-2xl text-pretty text-lg leading-8 text-zinc-300"
+            >
+              <span className="text-zinc-50">{site.hero.headline}</span>{" "}
+              {site.hero.subheadline}
+            </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-9 flex flex-col gap-3 sm:flex-row"
-        >
-          <a
-            href="#iletisim"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 px-5 text-sm font-semibold text-black transition hover:brightness-110"
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.24,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mt-9 flex flex-col gap-3 sm:flex-row"
+            >
+              <a
+                href="#iletisim"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 px-5 text-sm font-semibold text-black transition hover:brightness-110"
+              >
+                İletişime geç <Send className="size-4" />
+              </a>
+              <a
+                href={site.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 text-sm font-semibold text-zinc-50 transition hover:bg-white/10"
+              >
+                LinkedIn <Linkedin className="size-4" />
+              </a>
+              <a
+                href={site.links.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 text-sm font-semibold text-zinc-50 transition hover:bg-white/10"
+              >
+                GitHub <Github className="size-4" />
+              </a>
+            </motion.div>
+
+            <motion.a
+              href="#hakkimda"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-12 inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-zinc-50"
+            >
+              Aşağı kaydır <ArrowDown className="size-4" />
+            </motion.a>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 14, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-5"
           >
-            İletişime geç <Send className="size-4" />
-          </a>
-          <a
-            href={site.links.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 text-sm font-semibold text-zinc-50 transition hover:bg-white/10"
-          >
-            LinkedIn <Linkedin className="size-4" />
-          </a>
-          <a
-            href={site.links.github}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 text-sm font-semibold text-zinc-50 transition hover:bg-white/10"
-          >
-            GitHub <Github className="size-4" />
-          </a>
-        </motion.div>
-
-        <motion.a
-          href="#hakkimda"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12 inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-zinc-50"
-        >
-          Aşağı kaydır <ArrowDown className="size-4" />
-        </motion.a>
+            <div className="relative mx-auto max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3 shadow-[0_0_0_1px_rgba(255,255,255,0.04)]">
+              <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-60" />
+              <div className="relative overflow-hidden rounded-2xl">
+                {showImage ? (
+                  <Image
+                    src={site.avatar.src}
+                    alt={site.avatar.alt}
+                    width={720}
+                    height={900}
+                    priority
+                    className="h-[380px] w-full object-cover"
+                    onError={() => setShowImage(false)}
+                  />
+                ) : (
+                  <div className="flex h-[380px] w-full items-center justify-center bg-black/40">
+                    <div className="text-center">
+                      <div className="mx-auto inline-flex size-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-lg font-bold tracking-[0.18em] text-zinc-50">
+                        YEK
+                      </div>
+                      <p className="mt-4 text-sm text-zinc-300">
+                        Fotoğraf için <span className="font-mono">public/profile.jpg</span>
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="relative mt-3 flex items-center justify-between gap-3">
+                <p className="text-xs font-medium text-zinc-200">{site.name}</p>
+                <div className="h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 opacity-80" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

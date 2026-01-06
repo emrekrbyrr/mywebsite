@@ -2,6 +2,10 @@ export const site = {
   name: "Yunus Emre KIRBAYIR",
   role: "Full‑Stack Developer",
   location: "Türkiye",
+  avatar: {
+    src: "/profile.jpg",
+    alt: "Yunus Emre KIRBAYIR profil fotoğrafı",
+  },
   email: "emrekirbayir@gmail.com",
   phone: "+90 539 573 46 36",
   links: {
