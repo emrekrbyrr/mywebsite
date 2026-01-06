@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[color:var(--background)] text-zinc-50">
+    <div className="min-h-screen bg-[color:var(--background)] text-zinc-950">
       <a
         href="#icerik"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-black"
@@ -26,7 +26,7 @@ export default function Home() {
       <main id="icerik">
         <section
           id="hakkimda"
-          className="relative border-y border-white/10 bg-gradient-to-b from-[color:var(--background)] via-[#0b1124] to-[#0f1630] py-20 sm:py-28"
+          className="relative border-y border-black/10 bg-gradient-to-b from-[color:var(--background)] via-[#eef2ff] to-[color:var(--background)] py-20 sm:py-28"
         >
           <Container>
             <Reveal>
@@ -42,34 +42,34 @@ export default function Home() {
                 <div className="space-y-5">
                   {site.about.paragraphs.map((p, idx) => (
                     <Reveal key={idx} delay={idx * 0.04}>
-                      <p className="text-base leading-8 text-zinc-300">{p}</p>
+                      <p className="text-base leading-8 text-zinc-700">{p}</p>
                     </Reveal>
                   ))}
                 </div>
               </div>
 
               <Reveal className="lg:col-span-1" delay={0.12}>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                  <p className="text-sm font-semibold text-zinc-50">
+                <div className="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-sm">
+                  <p className="text-sm font-semibold text-zinc-950">
                     Hızlı Özet
                   </p>
-                  <ul className="mt-5 space-y-4 text-sm text-zinc-300">
+                  <ul className="mt-5 space-y-4 text-sm text-zinc-700">
                     <li className="flex gap-3">
-                      <Layers className="mt-0.5 size-4 text-zinc-200" />
+                      <Layers className="mt-0.5 size-4 text-zinc-600" />
                       <span>
                         React.js • Node.js • PostgreSQL ile Full‑Stack ürünler
                       </span>
                     </li>
                     <li className="flex gap-3">
-                      <Server className="mt-0.5 size-4 text-zinc-200" />
+                      <Server className="mt-0.5 size-4 text-zinc-600" />
                       <span>AWS • Docker • Linux ile üretim odaklı kurulum</span>
                     </li>
                     <li className="flex gap-3">
-                      <Cpu className="mt-0.5 size-4 text-zinc-200" />
+                      <Cpu className="mt-0.5 size-4 text-zinc-600" />
                       <span>EMC / elektromanyetik yaklaşım ile sistematik düşünce</span>
                     </li>
                     <li className="flex gap-3">
-                      <Globe className="mt-0.5 size-4 text-zinc-200" />
+                      <Globe className="mt-0.5 size-4 text-zinc-600" />
                       <span>UI/UX • SEO • Prompt Engineering</span>
                     </li>
                   </ul>
@@ -92,11 +92,11 @@ export default function Home() {
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {site.focus.items.map((item, idx) => (
                 <Reveal key={item.title} delay={idx * 0.05}>
-                  <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
-                    <p className="text-sm font-semibold text-zinc-50">
+                  <div className="h-full rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm transition hover:bg-white">
+                    <p className="text-sm font-semibold text-zinc-950">
                       {item.title}
                     </p>
-                    <p className="mt-3 text-sm leading-7 text-zinc-300">
+                    <p className="mt-3 text-sm leading-7 text-zinc-700">
                       {item.description}
                     </p>
                   </div>
@@ -108,7 +108,7 @@ export default function Home() {
 
         <section
           id="projeler"
-          className="border-y border-white/10 bg-gradient-to-b from-[color:var(--background)] via-[#0f1630] to-[color:var(--background)] py-20 sm:py-28"
+          className="border-y border-black/10 bg-gradient-to-b from-[color:var(--background)] via-[#eef2ff] to-[color:var(--background)] py-20 sm:py-28"
         >
           <Container>
             <Reveal>
@@ -122,20 +122,20 @@ export default function Home() {
             <div className="mt-10 grid gap-4 md:grid-cols-2">
               {site.projects.items.map((project, idx) => (
                 <Reveal key={project.title} delay={idx * 0.04}>
-                  <div className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
-                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition group-hover:opacity-100" />
+                  <div className="group relative h-full overflow-hidden rounded-2xl border border-black/10 bg-white/70 p-6 shadow-sm transition hover:bg-white">
+                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/10 to-transparent opacity-0 transition group-hover:opacity-100" />
 
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <p className="text-sm font-semibold text-zinc-50">
+                        <p className="text-sm font-semibold text-zinc-950">
                           {project.title}
                         </p>
-                        <p className="mt-2 text-sm leading-7 text-zinc-300">
+                        <p className="mt-2 text-sm leading-7 text-zinc-700">
                           {project.description}
                         </p>
                       </div>
 
-                      <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium tracking-wide text-zinc-200">
+                      <span className="shrink-0 rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-medium tracking-wide text-zinc-700 shadow-sm">
                         {project.kind === "EMC" ? "EMC" : "Software"}
                       </span>
                     </div>
@@ -144,7 +144,7 @@ export default function Home() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-zinc-200"
+                          className="rounded-full border border-black/10 bg-black/5 px-3 py-1 text-[11px] font-medium text-zinc-700"
                         >
                           {tag}
                         </span>

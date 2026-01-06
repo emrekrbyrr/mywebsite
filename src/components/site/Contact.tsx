@@ -10,7 +10,7 @@ function CopyButton({ value, label }: { value: string; label: string }) {
   return (
     <button
       type="button"
-      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-200 transition hover:bg-white/10"
+      className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 shadow-sm transition hover:bg-zinc-50"
       onClick={async () => {
         try {
           await navigator.clipboard.writeText(value);
@@ -33,36 +33,36 @@ export function Contact() {
 
   return (
     <div className="grid gap-4 sm:grid-cols-2">
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-zinc-50">E‑posta</p>
+            <p className="text-sm font-semibold text-zinc-950">E‑posta</p>
             <a
               href={`mailto:${site.email}`}
-              className="mt-1 block text-sm text-zinc-300 hover:text-zinc-50"
+              className="mt-1 block text-sm text-zinc-600 hover:text-zinc-950"
             >
               {site.email}
             </a>
           </div>
-          <Mail className="mt-0.5 size-4 text-zinc-300" />
+          <Mail className="mt-0.5 size-4 text-zinc-500" />
         </div>
         <div className="mt-4">
           <CopyButton value={site.email} label="E-posta" />
         </div>
       </div>
 
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+      <div className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-zinc-50">Telefon</p>
+            <p className="text-sm font-semibold text-zinc-950">Telefon</p>
             <a
               href={phoneHref}
-              className="mt-1 block text-sm text-zinc-300 hover:text-zinc-50"
+              className="mt-1 block text-sm text-zinc-600 hover:text-zinc-950"
             >
               {site.phone}
             </a>
           </div>
-          <Phone className="mt-0.5 size-4 text-zinc-300" />
+          <Phone className="mt-0.5 size-4 text-zinc-500" />
         </div>
         <div className="mt-4">
           <CopyButton value={site.phone} label="Telefon" />
@@ -73,16 +73,16 @@ export function Contact() {
         href={site.links.linkedin}
         target="_blank"
         rel="noreferrer"
-        className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10"
+        className="group rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm transition hover:bg-white"
       >
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-zinc-50">LinkedIn</p>
-            <p className="mt-1 text-sm text-zinc-300 group-hover:text-zinc-50">
+            <p className="text-sm font-semibold text-zinc-950">LinkedIn</p>
+            <p className="mt-1 text-sm text-zinc-600 group-hover:text-zinc-950">
               Profilimi görüntüle
             </p>
           </div>
-          <Linkedin className="mt-0.5 size-4 text-zinc-300 group-hover:text-zinc-50" />
+          <Linkedin className="mt-0.5 size-4 text-zinc-500 group-hover:text-zinc-950" />
         </div>
       </a>
 
@@ -90,16 +90,16 @@ export function Contact() {
         href={site.links.github}
         target="_blank"
         rel="noreferrer"
-        className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10"
+        className="group rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm transition hover:bg-white"
       >
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-zinc-50">GitHub</p>
-            <p className="mt-1 text-sm text-zinc-300 group-hover:text-zinc-50">
+            <p className="text-sm font-semibold text-zinc-950">GitHub</p>
+            <p className="mt-1 text-sm text-zinc-600 group-hover:text-zinc-950">
               Repolarımı incele
             </p>
           </div>
-          <Github className="mt-0.5 size-4 text-zinc-300 group-hover:text-zinc-50" />
+          <Github className="mt-0.5 size-4 text-zinc-500 group-hover:text-zinc-950" />
         </div>
       </a>
     </div>
