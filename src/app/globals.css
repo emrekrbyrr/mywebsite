@@ -2,8 +2,8 @@
 
 :root {
   /* Brand palette */
-  --primary: #222222;
-  --secondary: #7b7b7b;
+  --primary: #1a1a1a;
+  --secondary: #6f6f6f;
   --tertiary: #f8f8f8;
   --white: #ffffff;
 
@@ -13,7 +13,7 @@
   --muted: var(--secondary);
   --surface: var(--white);
   /* Make gray/borders a bit more visible */
-  --border: rgba(34, 34, 34, 0.18);
+  --border: rgba(26, 26, 26, 0.22);
 
   /* Warm accent (cream → coffee) */
   --accent-cream: #e7d6b5;
@@ -22,7 +22,7 @@
 
   /* Section alternates (derived tints) */
   --section: var(--tertiary);
-  --section-alt: #f2f2f2;
+  --section-alt: #ededed;
 }
 
 @theme inline {
