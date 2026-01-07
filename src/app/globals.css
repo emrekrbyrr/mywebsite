@@ -12,12 +12,17 @@
   --foreground: var(--primary);
   --muted: var(--secondary);
   --surface: var(--white);
-  --border: rgba(34, 34, 34, 0.12);
+  /* Make gray/borders a bit more visible */
+  --border: rgba(34, 34, 34, 0.18);
 
   /* Warm accent (cream → coffee) */
   --accent-cream: #e7d6b5;
   --accent-sand: #d8c7a3;
   --accent-coffee: #8b6a3e;
+
+  /* Section alternates (derived tints) */
+  --section: var(--tertiary);
+  --section-alt: #f2f2f2;
 }
 
 @theme inline {

@@ -18,7 +18,7 @@ function Glow({ className }: { className?: string }) {
     >
       <div className="absolute -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#222222]/18 via-[#7b7b7b]/14 to-[#222222]/18 blur-3xl" />
       <div className="absolute -bottom-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#7b7b7b]/14 via-[#222222]/14 to-[#7b7b7b]/14 blur-3xl" />
-      <div className="absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,rgba(34,34,34,0.10)_1px,transparent_0)] [background-size:28px_28px] opacity-25" />
+      <div className="absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,rgba(34,34,34,0.14)_1px,transparent_0)] [background-size:28px_28px] opacity-35" />
       <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-transparent" />
     </div>
   );

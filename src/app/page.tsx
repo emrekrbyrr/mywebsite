@@ -26,7 +26,7 @@ export default function Home() {
       <main id="icerik">
         <section
           id="hakkimda"
-          className="relative border-y border-[color:var(--border)] bg-gradient-to-b from-[color:var(--background)] via-white to-[color:var(--background)] py-20 sm:py-28"
+          className="relative border-y border-[color:var(--border)] bg-[color:var(--surface)] py-20 sm:py-28"
         >
           <Container>
             <Reveal>
@@ -51,7 +51,7 @@ export default function Home() {
               </div>
 
               <Reveal className="lg:col-span-1" delay={0.12}>
-                <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm">
+                <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--section)] p-6 shadow-sm">
                   <p className="text-sm font-semibold text-[color:var(--foreground)]">
                     Hızlı Özet
                   </p>
@@ -81,7 +81,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id="odak" className="py-20 sm:py-28">
+        <section id="odak" className="bg-[color:var(--section)] py-20 sm:py-28">
           <Container>
             <Reveal>
               <SectionHeader
@@ -110,7 +110,7 @@ export default function Home() {
 
         <section
           id="projeler"
-          className="border-y border-[color:var(--border)] bg-gradient-to-b from-[color:var(--background)] via-white to-[color:var(--background)] py-20 sm:py-28"
+          className="border-y border-[color:var(--border)] bg-[color:var(--section-alt)] py-20 sm:py-28"
         >
           <Container>
             <Reveal>
@@ -161,7 +161,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id="iletisim" className="py-20 sm:py-28">
+        <section id="iletisim" className="bg-[color:var(--section)] py-20 sm:py-28">
           <Container>
             <Reveal>
               <SectionHeader
