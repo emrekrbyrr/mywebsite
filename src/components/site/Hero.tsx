@@ -124,40 +124,32 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5"
           >
-            <div className="relative mx-auto w-full max-w-[360px]">
-              <div className="absolute -inset-10 rounded-full bg-gradient-to-r from-[#222222]/18 via-[#7b7b7b]/14 to-[#222222]/18 blur-3xl" />
-
-              <div className="relative overflow-hidden rounded-full border border-[color:var(--border)] bg-[#fff6e8]/70 p-2 shadow-sm backdrop-blur-xl">
-                <div className="relative aspect-square overflow-hidden rounded-full">
-                  {showImage ? (
-                    <Image
-                      src={site.avatar.src}
-                      alt={site.avatar.alt}
-                      fill
-                      priority
-                      sizes="(max-width: 1024px) 320px, 360px"
-                      className="object-cover"
-                      onError={() => setShowImage(false)}
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-[color:var(--tertiary)]">
-                      <div className="text-center">
-                        <div className="mx-auto inline-flex size-16 items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] text-lg font-bold tracking-[0.18em] text-[color:var(--foreground)] shadow-sm">
-                          YEK
-                        </div>
-                        <p className="mt-4 text-sm text-[color:var(--muted)]">
-                          Fotoğraf için{" "}
-                          <span className="font-mono">public/profile.jpg</span>
-                        </p>
-                      </div>
+            <div className="relative mx-auto w-full max-w-[420px]">
+              {showImage ? (
+                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_18px_55px_rgba(0,0,0,0.12)]">
+                  <Image
+                    src={site.avatar.src}
+                    alt={site.avatar.alt}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 340px, 420px"
+                    className="object-cover"
+                    onError={() => setShowImage(false)}
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-[4/5] w-full items-center justify-center rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface)] shadow-sm">
+                  <div className="text-center">
+                    <div className="mx-auto inline-flex size-16 items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] text-lg font-bold tracking-[0.18em] text-[color:var(--foreground)] shadow-sm">
+                      YEK
                     </div>
-                  )}
+                    <p className="mt-4 text-sm text-[color:var(--muted)]">
+                      Fotoğraf için{" "}
+                      <span className="font-mono">public/profile.jpg</span>
+                    </p>
+                  </div>
                 </div>
-
-                <div className="mt-3 flex items-center justify-center px-2 pb-1">
-                  <div className="h-1 w-20 rounded-full bg-gradient-to-r from-[color:var(--accent-cream)] via-[color:var(--accent-sand)] to-[color:var(--accent-coffee)] opacity-80" />
-                </div>
-              </div>
+              )}
             </div>
           </motion.div>
         </div>
