@@ -3,7 +3,7 @@ export const site = {
   role: "Full‑Stack Developer",
   location: "Türkiye",
   avatar: {
-    src: "/profile.jpg",
+    src: "/profile-20.jpg",
     alt: "Yunus Emre KIRBAYIR profil fotoğrafı",
   },
   email: "emrekirbayir@gmail.com",
@@ -61,6 +61,14 @@ export const site = {
   projects: {
     title: "Projeler",
     items: [
+      {
+        title: "Kurumum — Kurs ve Akademi Yönetimi",
+        description:
+          "Kurs, akademi ve atölyeler için ders programı, telafi, yoklama ve muhasebeyi tek uygulamada toplayan çok kurumlu mobil uygulama. Yönetici, öğretmen, öğrenci ve veli kendi ekranını görür; kurum verileri uygulama, veritabanı (RLS) ve tetikleyici katmanlarıyla birbirinden yalıtılır.",
+        tags: ["React Native (Expo)", "Fastify", "Prisma", "PostgreSQL", "Docker", "AWS"],
+        kind: "Software",
+        href: "https://kurumum.app",
+      },
       {
         title: "Varlık ve Kiralama Yönetim Sistemi",
         description:

@@ -153,6 +153,17 @@ export default function Home() {
                       ))}
                     </div>
 
+                    {"href" in project && (
+                      <a
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-5 inline-flex text-sm font-medium text-[color:var(--foreground)] underline-offset-4 hover:underline"
+                      >
+                        {project.href.replace("https://", "")} ↗
+                      </a>
+                    )}
+
                     <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400 opacity-80" />
                   </div>
                 </Reveal>
